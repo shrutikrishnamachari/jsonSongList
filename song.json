@@ -1,17 +1,10 @@
 [
 	{
 	"title": "We're Good",
-	"type": "cat",
-	"breed": "Maine Coon",
-	"age": 4,
+	"year": 2021,
 	"genre": ["Pop", "R&B"],
 	"artists": ["Dua Lipa"],
-	"adopting_family": {
-		"name": "smith",
-		"town": "Cambridge",
-		"children" : 1,
-		"other_pets": false
-	}
+
 },
 {
 	"name": "Fido2",

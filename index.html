@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <title>JSON SongList Object</title>
 	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-	<script language="javascript" src="song.json"></script>
+	<script language="javascript" src="songs.json"></script>
 	
 
 </head>
 
 <body>
 	<script language="javascript">
-	$.get( "https://shrutikrishnamachari.github.io/jsonSongList/song.json", 
+	$.get( "https://shrutikrishnamachari.github.io/jsonSongList/songs.json", 
 		  function( data ) {
 			str = JSON.stringify(data);
 			document.write(str +"<br/>");
