@@ -14,7 +14,8 @@
 	$.get( "https://shrutikrishnamachari.github.io/jsonSongList/songs.json", 
 		  function( data ) {
 			str = JSON.stringify(data);
-			document.write(str +"<br/>");
+                         jobj = JSON.parse(str);
+			document.write (jobj["title"]+ "<br/>")
 	})
 </script>
 </body>
