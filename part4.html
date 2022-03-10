@@ -1,57 +1,81 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>JSON SongList Object</title>
+	<meta charset="utf-8">
+	<title>JSON SongList Object</title>
+
 	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 	<script language="javascript" src="songs.json"></script>
-<style>
-table, th, td {
-  border:1px solid black;
-}
-body {
-	text-align: center;
-</style>	
 
+	<style>
+		table, th, td {
+  			border:1px solid #34084d;
+		}
+		body {
+			text-align: center;
+			font-family: Arial;
+			background-color: #e4cfea;
+			color: #34084d;
+		}
+		.btn {
+  			display: inline-block;
+  			padding: 15px 25px;
+  			font-size: 24px;
+  			cursor: pointer;
+  			text-decoration: none;
+  			outline: none;
+  			color: #e4cfea;
+  			background-color: #34084d;
+  			border: none;
+  			border-radius: 15px;
+  			box-shadow: 0 9px #999;
+		}
+		.btn:hover {background-color: #52307c}
+		.btn:active {
+ 			background-color: #52307c;
+  			box-shadow: 0 5px #666;
+  			transform: translateY(4px);
+		}
+	</style>	
 </head>
-
 <body>
         <h1 style="text-align: center;">Song List</h1>
-<form>
-  <select name="genre" id="genre">
-    <option value="Pop">Pop</option>
-    <option value="R&B">R and B</option>
-    <option value="Soul">Soul</option>
-    <option value="Boogie">Boogie</option>
-    <option value="Disco">Disco</option>
-    <option value="Rock">Rock</option>
-    <option value="Electropop">Electropop</option>
-  </select>
-  <br>
-  <input type ="button" value="filter"  name="filter" onclick="myFunction()"><br><br><br>
-</form> 
+	<form>
+  		<select name="genre" id="genre">
+    			<option value="Pop">Pop</option>
+    			<option value="R&B">R and B</option>
+    			<option value="Soul">Soul</option>
+    			<option value="Boogie">Boogie</option>
+    			<option value="Disco">Disco</option>
+    			<option value="Rock">Rock</option>
+    			<option value="Electropop">Electropop</option>
+  		</select>
+  		<br><br>
+  		<input type ="button" class="btn" value="filter"  name="filter" onclick="myFunction()"><br><br><br>
+	</form> 
 
 	<div id="songlist"></div>
 	<script language="javascript">
 
-function myFunction(){
+	//Function that filters songs by genre selected in form on button click
+	function myFunction(){
 
-genre = document.getElementById("genre").value;
-	$.get( "https://shrutikrishnamachari.github.io/jsonSongList/songs.json", 
-		  function( data ) {
+		genre = document.getElementById("genre").value;
+
+		// Get data from json file and loop through each song in serialized data
+		$.get( "https://shrutikrishnamachari.github.io/jsonSongList/songs.json", function( data ) {
 			str = JSON.stringify(data);
-		strHTML=   "<table style=" + "width:100%" + "><tr><th>Title</th><th>Artists</th><th>Genre</th><th>Year</th></tr>";
-		data.forEach(function(song) { 
-		if(song.genres.includes(genre)){
-		strHTML += "<tr><td>" 
-			    + song.title + "</td><td>" + song.artists.join(" & ") + "</td><td>" + song.genres.join(" & ") + "</td><td>"+ song.year + "</td></tr>";
-		}
+			strHTML=   "<table style=" + "width:100%" + "><tr><th>Title</th><th>Artists</th><th>Genre</th><th>Year</th></tr>";
+			data.forEach(function(song) { 
+				// If song is of selected genre display on page
+				if(song.genres.includes(genre)){
+					strHTML += "<tr><td>" + song.title + "</td><td>" + song.artists.join(" & ") + "</td><td>" + song.genres.join(" & ") + "</td><td>"+ song.year + "</td></tr>";
+				}
 			}) 
-	strHTML += "</table>";
-	document.getElementById("songlist").innerHTML = strHTML;  /**/
-	})
-
-}
-</script>
+		strHTML += "</table>";
+		document.getElementById("songlist").innerHTML = strHTML;  /**/
+		})
+	}
+	</script>
 </body>
 </html>
