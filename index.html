@@ -14,7 +14,7 @@
 	$.get( "https://shrutikrishnamachari.github.io/jsonSongList/songs.json", 
 		  function( data ) {
 			str = JSON.stringify(data);
-		strHTML=   <table><tr><th>Title</th><th>Artists</th><th>Genre</th><th>Year</th></tr>;
+		strHTML=   "<table><tr><th>Title</th><th>Artists</th><th>Genre</th><th>Year</th></tr>";
 		data.forEach(function(song) { 
 		strHTML += "<tr><td>" 
 			    + song.title + "</td><td>" + song.artists "</td><td>" + song.genres + "</td><td>"+ song.year + "</td></tr>";
