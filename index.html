@@ -15,7 +15,10 @@
 		  function( data ) {
 			str = JSON.stringify(data);
                          jobj = JSON.parse(str);
-			document.write (jobj[0]["title"]+ "<br/>")
+			strHTML= "<ul>";
+			data.forEach(function(song) { 
+				strHTML += "<li>" + song.title + " : " + song.year + "</li>";
+			}) 
 	})
 </script>
 </body>
