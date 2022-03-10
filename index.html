@@ -14,14 +14,12 @@
 	$.get( "https://shrutikrishnamachari.github.io/jsonSongList/songs.json", 
 		  function( data ) {
 			str = JSON.stringify(data);
-			document.write(str +"<br/>");
-		strHTML= "<ul>";
+		strHTML=   <table><tr><th>Title</th><th>Artists</th><th>Genre</th><th>Year</th></tr>;
 		data.forEach(function(song) { 
-		strHTML += "<li>" 
-			    + song.title + " : " 
-				+ song.year + "</li>";
+		strHTML += "<tr><td>" 
+			    + song.title + "</td><td>" + song.artists "</td><td>" + song.genres + "</td><td>"+ song.year + "</td></tr>";
 			}) 
-	strHTML += "</ul>";
+	strHTML += "</table>";
 	document.write (strHTML);  /**/
 	})
 </script>
