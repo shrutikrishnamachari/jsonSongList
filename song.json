@@ -4,7 +4,7 @@
 	"type": "cat",
 	"breed": "Maine Coon",
 	"age": 4,
-	"gender": "female",
+	"genre": ["Pop", "R&B"],
 	"artists": ["Dua Lipa"],
 	"adopting_family": {
 		"name": "smith",
