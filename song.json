@@ -1,11 +1,11 @@
 [
 	{
-	"title": "Dua Lipa",
+	"title": "We're Good",
 	"type": "cat",
 	"breed": "Maine Coon",
 	"age": 4,
 	"gender": "female",
-	"procedures": ["checkup","rabies","spayed"],
+	"artists": ["Dua Lipa"],
 	"adopting_family": {
 		"name": "smith",
 		"town": "Cambridge",
