@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSON SongList Object</title>
+	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	<script language="javascript" src="songs.json"></script>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>	
+
+</head>
+
+<body>
+        <h1 style="text-align: center;">Song List</h1>
+
+	<div id="songlist"></div>
+	<script language="javascript">
+	$.get( "https://shrutikrishnamachari.github.io/jsonSongList/songs.json", 
+		  function( data ) {
+			str = JSON.stringify(data);
+		strHTML=   "<table style=" + "width:100%" + "><tr><th>Title</th><th>Artists</th><th>Genre</th><th>Year</th></tr>";
+		data.forEach(function(song) { 
+		strHTML += "<tr><td>" 
+			    + song.title + "</td><td>" + song.artists.join(" & ") + "</td><td>" + song.genres.join(" & ") + "</td><td>"+ song.year + "</td></tr>";
+			}) 
+	strHTML += "</table>";
+	document.getElementById("songlist").innerHTML = strHTML;  /**/
+	})
+</script>
+</body>
+</html>

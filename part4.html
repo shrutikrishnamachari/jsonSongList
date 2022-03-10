@@ -9,25 +9,49 @@
 table, th, td {
   border:1px solid black;
 }
+body {
+	text-align: center;
 </style>	
 
 </head>
 
 <body>
         <h1 style="text-align: center;">Song List</h1>
+<form>
+  <select name="genre" id="genre">
+    <option value="Pop">Pop</option>
+    <option value="R&B">R and B</option>
+    <option value="Soul">Soul</option>
+    <option value="Boogie">Boogie</option>
+    <option value="Disco">Disco</option>
+    <option value="Rock">Rock</option>
+    <option value="Electropop">Electropop</option>
+  </select>
+  <br>
+  <input type ="button" value="filter"  name="filter" onclick="myFunction()"><br><br><br>
+</form> 
+
 	<div id="songlist"></div>
 	<script language="javascript">
+
+function myFunction(){
+
+genre = document.getElementById("genre").value;
 	$.get( "https://shrutikrishnamachari.github.io/jsonSongList/songs.json", 
 		  function( data ) {
 			str = JSON.stringify(data);
 		strHTML=   "<table style=" + "width:100%" + "><tr><th>Title</th><th>Artists</th><th>Genre</th><th>Year</th></tr>";
 		data.forEach(function(song) { 
+		if(song.genres.includes(genre)){
 		strHTML += "<tr><td>" 
 			    + song.title + "</td><td>" + song.artists.join(" & ") + "</td><td>" + song.genres.join(" & ") + "</td><td>"+ song.year + "</td></tr>";
+		}
 			}) 
 	strHTML += "</table>";
 	document.getElementById("songlist").innerHTML = strHTML;  /**/
 	})
+
+}
 </script>
 </body>
 </html>
