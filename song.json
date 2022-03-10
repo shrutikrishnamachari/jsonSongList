@@ -1,44 +1,62 @@
 [
 	{
-	"name": "Dua Lipa",
-	"type": "cat",
-	"breed": "Maine Coon",
-	"age": 4,
-	"gender": "female",
-	"procedures": ["checkup","rabies","spayed"],
-	"adopting_family": {
-		"name": "smith",
-		"town": "Cambridge",
-		"children" : 1,
-		"other_pets": false
-	}
+	"title": "We're Good",
+	"artists": ["Dua Lipa"],
+	"genres": ["Pop","R&B"],
+	"year": 2021,
 },
 {
-	"name": "Fido2",
-	"type": "dog",
-	"breed": "Maine Coon",
-	"age": 5,
-	"gender": "female",
-	"procedures": ["checkup","rabies","spayed"],
-	"adopting_family": {
-		"name": "smith",
-		"town": "Cambridge",
-		"children" : 1,
-		"other_pets": false
-	}
+	"title": "Good Days",
+	"artists": ["SZA", "Jacob Collier"],
+	"genres": ["Soul","R&B"],
+	"year": 2020,
 },
 {
-	"name": "Fido3",
-	"type": "cat",
-	"breed": "Maine Coon",
-	"age": 6,
-	"gender": "female",
-	"procedures": ["checkup","rabies","spayed"],
-	"adopting_family": {
-		"name": "smith",
-		"town": "Cambridge",
-		"children" : 1,
-		"other_pets": false
-	}
+	"title": "Leave the Door Open",
+	"artists": ["Silk Sonic", "Bruno Mars", "Anderson Paak"],
+	"genres": ["Pop","R&B", "Soul"],
+	"year": 2021,
+},
+{
+	"title": "Crazy in Love",
+	"artists": ["Beyonce", "Jay-Z"],
+	"genres": ["Pop"],
+	"year": 2003,
+},
+{
+	"title": "Uptown Funk",
+	"artists": ["Mark Ronson", "Bruno Mars"],
+	"genres": ["Boogie","R&B", "Soul"],
+	"year": 2021,
+},
+{
+	"title": "Dancing Queen",
+	"artists": ["ABBA"],
+	"genres": ["Disco","Pop"],
+	"year": 1976,
+},
+{
+	"title": "Don't Stop Believin",
+	"artists": ["Journey"],
+	"genres": ["Rock"],
+	"year": 1981,
+},
+{
+	"title": "On the Floor",
+	"artists": ["Jennifer Lopez", "Pitbull"],
+	"genres": ["Pop","Electropop"],
+	"year": 2011,
+},
+{
+	"title": "Party in the USA",
+	"artists": ["Miley Cyrus"],
+	"genres": ["Pop"],
+	"year": 2009,
+},
+{
+	"title": "Just Dance",
+	"artists": ["Lady Gaga"],
+	"genres": ["Electropop"],
+	"year": 2008,
 }
-	]
+]
