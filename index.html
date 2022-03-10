@@ -15,6 +15,7 @@ table, th, td {
 
 <body>
         <h1 style="text-align: center;">Song List</h1>
+	<div id="songlist"></div>
 	<script language="javascript">
 	$.get( "https://shrutikrishnamachari.github.io/jsonSongList/songs.json", 
 		  function( data ) {
@@ -25,7 +26,7 @@ table, th, td {
 			    + song.title + "</td><td>" + song.artists.join(" & ") + "</td><td>" + song.genres.join(" & ") + "</td><td>"+ song.year + "</td></tr>";
 			}) 
 	strHTML += "</table>";
-	document.write (strHTML);  /**/
+	document.getElementById("songlist").innerHTML = strHTML;  /**/
 	})
 </script>
 </body>
